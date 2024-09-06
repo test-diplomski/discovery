@@ -20,6 +20,10 @@ jobs:
     
         - name: Install dependencies
           run: go mod download
+          working-directory: ./
+
+        - name: Add packages
+          run: go get
           working-directory: ./ 
 
         - name: Build
